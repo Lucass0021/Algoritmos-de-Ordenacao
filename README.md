@@ -4,7 +4,7 @@ Este projeto implementa algoritmos de ordenação, exibindo as pontuações ante
 
 ---
 
-## Como compilar e executar
+# Como compilar e executar
 No terminal, dentro da pasta `exercicios/`:  
 
 ```bash
@@ -13,7 +13,8 @@ gcc ranking.c -o ranking
 ./ranking
 ```
 ---
-Colaboradores
+
+# Colaboradores
 
 - Lucas Werpp Franco - RM: 556044
 - Lucas Alves Antunes Almeida - RM: 566362
