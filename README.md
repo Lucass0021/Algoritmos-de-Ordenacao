@@ -10,6 +10,7 @@ No terminal, dentro da pasta `exercicios/`:
 ```bash
 # Compilar ranking
 gcc ranking.c -o ranking
+# Executar ranking
 ./ranking
 ```
 ---
