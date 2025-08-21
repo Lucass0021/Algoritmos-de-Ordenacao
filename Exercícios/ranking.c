@@ -40,17 +40,51 @@ void bubble_int_desc(int *v, int n, Metricas *m) {
     }
 }
 
+// ------------------------------------
+// Selection Sort (int decrescente)
+// ------------------------------------
+void selection_int_desc(int *v, int n, Metricas *m) {
+    zera_metricas(m);
+    for (int i = 0; i < n - 1; i++) {
+        int idx_max = i;
+        for (int j = i + 1; j < n; j++) {
+            m->comparacoes++;
+            if (v[j] > v[idx_max]) idx_max = j;
+        }
+        if (idx_max != i) swap_int(&v[i], &v[idx_max], m);
+    }
+}
+
+int selection(void) {
+    int v2[] = {5, 2, 9, 1, 7, 6, 9, 3, 4, 8, 10, 0};
+
+    Metricas m;
+
+    printf("// ALGORITMO DE ORDENACAO - SELECTION SORT\n\n");
+    imprime_int(v2, 12, "Pontuacao original");
+    selection_int_desc(v2, 12, &m);
+    imprime_int(v2, 12, "Pontuacao ordenada (Decrescente)");
+
+    printf("O jogador com a maior pontuacao foi o da posicao 1, com %d pontos.\n", v2[0]);
+    printf("Comparacoes: %ld | Trocas: %ld\n\n", m.comparacoes, m.trocas);
+
+    return 0;
+}
+
 int main(void) {
     int v1[] = {5, 2, 9, 1, 7, 6, 9, 3, 4, 8, 10, 0};
 
     Metricas m;
 
+    printf("// ALGORITMO DE ORDENACAO - BUBBLE SORT\n\n");
     imprime_int(v1, 12, "Pontuacao original");
     bubble_int_desc(v1, 12, &m);
     imprime_int(v1, 12, "Pontuacao ordenada (Decrescente)");
 
     printf("O jogador com a maior pontuacao foi o da posicao 1, com %d pontos.\n", v1[0]);
     printf("Comparacoes: %ld | Trocas: %ld\n\n", m.comparacoes, m.trocas);
+
+    selection();
 
     return 0;
 }
