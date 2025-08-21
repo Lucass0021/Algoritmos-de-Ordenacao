@@ -45,9 +45,12 @@ int main(void) {
 
     Metricas m;
 
+    imprime_int(v1, 12, "Pontuacao original");
     bubble_int_desc(v1, 12, &m);
     imprime_int(v1, 12, "Pontuacao ordenada (Decrescente)");
-    printf("Comparações: %ld | Trocas: %ld\n\n", m.comparacoes, m.trocas);
+
+    printf("O jogador com a maior pontuacao foi o da posicao 1, com %d pontos.\n", v1[0]);
+    printf("Comparacoes: %ld | Trocas: %ld\n\n", m.comparacoes, m.trocas);
 
     return 0;
 }
