@@ -11,7 +11,12 @@ No terminal, dentro da pasta `exercicios/`:
 # Compilar ranking
 gcc ranking.c -o ranking
 # Executar ranking
-./ranking
+./ranking.exe
+
+# Compilar Ordenando
+gcc Ordenando.c -o Ordenando
+# Executar Ordenando
+./Ordenando.exe
 ```
 ---
 
